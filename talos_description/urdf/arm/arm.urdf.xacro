@@ -40,7 +40,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_1.STL" scale="1 ${reflect} 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_1.dae" scale="1 ${reflect} 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -75,7 +75,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_2.STL" scale="1 ${reflect} 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_2.dae" scale="1 ${reflect} 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -110,7 +110,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_3.STL" scale="1 ${reflect} 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_3.dae" scale="1 ${reflect} 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -147,7 +147,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_4.STL" scale="1 ${reflect} 1"/>
+          <mesh filename="package://talos_description/meshes/arm/arm_4.dae" scale="1 ${reflect} 1"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -177,22 +177,30 @@
    <gazebo reference="${name}_${side}_1_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <!--
      <material>Gazebo/FlatBlack</material>
+     -->
    </gazebo>
    <gazebo reference="${name}_${side}_2_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <!--
      <material>Gazebo/FlatBlack</material>
+     -->
    </gazebo>
    <gazebo reference="${name}_${side}_3_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <!--
      <material>Gazebo/FlatBlack</material>
+     -->
    </gazebo>
    <gazebo reference="${name}_${side}_4_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
+     <!--
      <material>Gazebo/FlatBlack</material>
+     -->
    </gazebo>
 
    <gazebo reference="${name}_${side}_1_joint">
