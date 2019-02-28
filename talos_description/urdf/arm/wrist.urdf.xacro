@@ -37,9 +37,16 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_5.STL" scale="1 ${reflect} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_5.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_5_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="LightGrey" />
       </visual>
 
       <collision>
@@ -71,9 +78,16 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_6.STL" scale="1 ${reflect} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_6.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_6_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="LightGrey" />
       </visual>
 
       <collision>
@@ -105,9 +119,16 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_7.STL" scale="1 ${reflect} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_7.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_7_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -145,7 +166,6 @@
     <gazebo reference="${name}_${side}_7_link">
       <mu1>0.9</mu1>
       <mu2>0.9</mu2>
-      <material>Gazebo/FlatBlack</material>
     </gazebo>
 
     <gazebo reference="${name}_${side}_5_joint">
