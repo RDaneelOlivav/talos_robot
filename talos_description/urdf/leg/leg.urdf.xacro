@@ -21,9 +21,17 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_z_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/v2/hip_z_lo_res.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/v2/hip_z_lo_res_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -53,9 +61,17 @@
       <visual>
         <origin xyz="0 0 0.0" rpy="0  0  0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_x_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/v2/hip_x_lo_res.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/v2/hip_x_lo_res_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -84,9 +100,16 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/hip_y_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/v2/hip_y_lo_res.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/v2/hip_y_lo_res_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -115,9 +138,16 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/knee_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/v2/knee_lo_res.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/v2/knee_lo_res_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -148,9 +178,16 @@
       <visual>
         <origin xyz="0 0 0.0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/ankle_Y_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/v2/ankle_Y_lo_res.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/v2/ankle_Y_lo_res_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="Grey" />
       </visual>
 
       <collision>
@@ -179,9 +216,16 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res.stl" scale="1 ${reflect*1} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/v2/ankle_X_lo_res_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="Grey" />
       </visual>
 
       <xacro:talos_foot_collision />

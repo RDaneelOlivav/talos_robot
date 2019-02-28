@@ -16,7 +16,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/base_link.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/base_link.dae" scale="1 1 1"/>
                 </geometry>
                 <material name="DarkGrey"/>
               </visual>
@@ -44,7 +44,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/gripper_motor_double.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/gripper_motor_double.dae" scale="1 1 1"/>
                 </geometry>
               <material name="Orange"/>
               </visual>
@@ -74,7 +74,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/inner_double.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/inner_double.dae" scale="1 1 1"/>
                 </geometry>
               <material name="Orange"/>
               </visual>
@@ -105,7 +105,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/fingertip.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/fingertip.dae" scale="1 1 1"/>
                 </geometry>
               <material name="DarkGrey"/>
               </visual>
@@ -136,7 +136,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/fingertip.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/fingertip.dae" scale="1 1 1"/>
                 </geometry>
                 <material name="DarkGrey"/>
               </visual>
@@ -166,7 +166,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/gripper_motor_single.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/gripper_motor_single.dae" scale="1 1 1"/>
                 </geometry>
               <material name="Orange"/>
               </visual>
@@ -197,7 +197,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/inner_single.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/inner_single.dae" scale="1 1 1"/>
                 </geometry>
               <material name="Orange"/>
               </visual>
@@ -227,7 +227,7 @@
               <visual>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                  <mesh filename="package://talos_description/meshes/gripper/fingertip.STL" scale="1 1 1"/>
+                  <mesh filename="package://talos_description/meshes/gripper/fingertip.dae" scale="1 1 1"/>
                 </geometry>
               <material name="DarkGrey"/>
               </visual>
@@ -254,14 +254,6 @@
 
         <xacro:virtual_joints name="${name}" />
         <xacro:gripper_transmission name="${name}" reduction="1.0" />
-
-        <!-- virtual mimic joints -->
-<!--         <xacro:gripper_virtual_transmission name="${name}_inner_double" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_fingertip_1" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_fingertip_2" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_inner_single" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_motor_single" reduction="1.0"/>
-        <xacro:gripper_virtual_transmission name="${name}_fingertip_3" reduction="1.0"/> -->
 
   </xacro:macro>
 

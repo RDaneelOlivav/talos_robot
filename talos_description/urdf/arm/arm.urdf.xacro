@@ -40,9 +40,17 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_1.dae" scale="1 ${reflect} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_1.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_1_reflect1.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -75,9 +83,17 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_2.dae" scale="1 ${reflect} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_2.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_2_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -110,9 +126,17 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_3.dae" scale="1 ${reflect} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_3.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_3_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -147,9 +171,16 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://talos_description/meshes/arm/arm_4.dae" scale="1 ${reflect} 1"/>
+          
+          <xacro:if value="${reflect == 1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_4.dae" scale="1 1 1"/>
+          </xacro:if>
+          
+          <xacro:if value="${reflect == -1}">
+            <mesh filename="package://talos_description/meshes/arm/arm_4_reflect.dae" scale="1 1 1"/>
+          </xacro:if>
+          
         </geometry>
-        <material name="DarkGrey" />
       </visual>
 
       <collision>
@@ -177,30 +208,18 @@
    <gazebo reference="${name}_${side}_1_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
-     <!--
-     <material>Gazebo/FlatBlack</material>
-     -->
    </gazebo>
    <gazebo reference="${name}_${side}_2_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
-     <!--
-     <material>Gazebo/FlatBlack</material>
-     -->
    </gazebo>
    <gazebo reference="${name}_${side}_3_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
-     <!--
-     <material>Gazebo/FlatBlack</material>
-     -->
    </gazebo>
    <gazebo reference="${name}_${side}_4_link">
      <mu1>0.9</mu1>
      <mu2>0.9</mu2>
-     <!--
-     <material>Gazebo/FlatBlack</material>
-     -->
    </gazebo>
 
    <gazebo reference="${name}_${side}_1_joint">
